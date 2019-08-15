@@ -1,0 +1,10 @@
+﻿<Window x:Class="WPFLayoutDemo.ScrollViewerDemo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ScrollViewerDemo" Height="300" Width="300">
+    <Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Auto">
+            <Rectangle Width="500" Height="400" Fill="Green"/>
+        </ScrollViewer>
+    </Grid>
+</Window>

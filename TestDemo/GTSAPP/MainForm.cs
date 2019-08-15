@@ -95,7 +95,11 @@ namespace TestDemo
             gridform.ShowDialog();
         }
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MuemForm mf = new MuemForm();
+            mf.ShowDialog();
+        }
     }
 
     #region Button按钮重写

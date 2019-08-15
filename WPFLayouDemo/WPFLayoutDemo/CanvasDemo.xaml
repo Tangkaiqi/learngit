@@ -1,0 +1,9 @@
+﻿<Window x:Class="WPFLayoutDemo.CanvasDemo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CanvasDemo" Height="640" Width="480">
+    <Canvas Margin="10,10,10,10" Background="White" >
+        <Rectangle Name="rect" Canvas.Left="300" Canvas.Top="180" Fill="Black" Stroke="Red"  Width="200" Height="200"/>
+        <Ellipse  Name="el" Canvas.Left="160" Canvas.Top="150" Fill="Azure" Stroke="Green" Width="180" Height="180"/>
+    </Canvas>
+</Window>

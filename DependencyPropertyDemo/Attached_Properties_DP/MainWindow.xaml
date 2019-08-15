@@ -1,0 +1,10 @@
+﻿<Window x:Class="Attached_Properties_DP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Attached_Properties_DP"
+        local:AttachedPropertyClass.IsAttached="true"
+        Title="Attached_Property_DP" Height="350" Width="525">
+    <Canvas>
+        <Button Canvas.Top="20" Canvas.Left="20" Content="Learning Hard!"/>
+    </Canvas>
+</Window>

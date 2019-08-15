@@ -1,0 +1,18 @@
+﻿<Window x:Class="ResourceDemo.ResourceUse"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="REsource" Height="100" Width="350"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <Window.Resources>
+        <!--定义一个字符串资源-->
+        <sys:String x:Key="nameStr">
+            LearningHard博客：http://www.cnblogs.com/zhili/
+        </sys:String>
+    </Window.Resources>
+    <StackPanel>
+        <!--使用资源字典中定义的资源-->
+        <Button  Margin="10" Background="{StaticResource blueBrush}" Content="Blue Button" FontWeight="{StaticResource fontWeight}"/>
+        <!--通过资源key来对资源进行使用-->
+        <TextBlock Text="{StaticResource nameStr}" Margin="10"/>
+    </StackPanel>
+</Window>

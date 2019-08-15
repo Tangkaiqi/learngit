@@ -1,0 +1,15 @@
+﻿<Window x:Class="TimedTask.View.ScreenLock"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize" AllowsTransparency="True" 
+        WindowStyle="None" Opacity="0.95" Topmost="True"
+        Title="ScreenLock" Loaded="ScreenLock_Loaded">
+    <Border x:Name="mainBoder">
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+            <Label Style="{StaticResource LockLabelStyle}" HorizontalAlignment="Center">
+                <TextBlock x:Name="txtPoint" TextWrapping="Wrap" Text="4532543254"></TextBlock>
+            </Label>
+        </StackPanel>
+    </Border>
+</Window>

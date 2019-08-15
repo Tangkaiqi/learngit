@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourceDemo", "ResourceDemo\ResourceDemo.csproj", "{ECC6507B-FC02-4E1D-8EE1-ECBFBA070479}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StyleDemo", "StyleDemo\StyleDemo.csproj", "{2026074C-5DCD-48A5-B0C0-C2F65CEF327A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECC6507B-FC02-4E1D-8EE1-ECBFBA070479}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECC6507B-FC02-4E1D-8EE1-ECBFBA070479}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECC6507B-FC02-4E1D-8EE1-ECBFBA070479}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECC6507B-FC02-4E1D-8EE1-ECBFBA070479}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2026074C-5DCD-48A5-B0C0-C2F65CEF327A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2026074C-5DCD-48A5-B0C0-C2F65CEF327A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2026074C-5DCD-48A5-B0C0-C2F65CEF327A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2026074C-5DCD-48A5-B0C0-C2F65CEF327A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -21,3 +21,28 @@ C:\Users\Administrator\Documents\visual studio 2015\Projects\TestDemo\GTSAPP\obj
 C:\Users\Administrator\Documents\visual studio 2015\Projects\TestDemo\GTSAPP\obj\Debug\GTSAPP.csproj.GenerateResource.Cache
 C:\Users\Administrator\Documents\visual studio 2015\Projects\TestDemo\GTSAPP\obj\Debug\TestDemo.exe
 C:\Users\Administrator\Documents\visual studio 2015\Projects\TestDemo\GTSAPP\obj\Debug\TestDemo.pdb
+D:\Projects\learngit\TestDemo\GTSAPP\bin\Debug\TestDemo.exe.config
+D:\Projects\learngit\TestDemo\GTSAPP\obj\Debug\TestDemo.exe
+D:\Projects\learngit\TestDemo\GTSAPP\obj\Debug\TestDemo.pdb
+D:\Projects\learngit\TestDemo\GTSAPP\bin\Debug\TestDemo.exe
+D:\Projects\learngit\TestDemo\GTSAPP\bin\Debug\TestDemo.pdb
+D:\Projects\learngit\TestDemo\GTSAPP\bin\Debug\log4net.dll
+D:\Projects\learngit\TestDemo\GTSAPP\bin\Debug\Tecan.Logging.NamedPipe.Client.NET.Helper.dll
+D:\Projects\learngit\TestDemo\GTSAPP\obj\Debug\GTSAPP.csprojResolveAssemblyReference.cache
+D:\Projects\learngit\TestDemo\GTSAPP\obj\Debug\TestDemo.AddTaskForm.resources
+D:\Projects\learngit\TestDemo\GTSAPP\obj\Debug\TestDemo.Form1.resources
+D:\Projects\learngit\TestDemo\GTSAPP\obj\Debug\TestDemo.Form2.resources
+D:\Projects\learngit\TestDemo\GTSAPP\obj\Debug\TestDemo.Form3.resources
+D:\Projects\learngit\TestDemo\GTSAPP\obj\Debug\TestDemo.MainForm.resources
+D:\Projects\learngit\TestDemo\GTSAPP\obj\Debug\TestDemo.MuemForm.resources
+D:\Projects\learngit\TestDemo\GTSAPP\obj\Debug\TestDemo.SystemForm.resources
+D:\Projects\learngit\TestDemo\GTSAPP\obj\Debug\TestDemo.TaskForm_bf.resources
+D:\Projects\learngit\TestDemo\GTSAPP\obj\Debug\TestDemo.TaskForm.resources
+D:\Projects\learngit\TestDemo\GTSAPP\obj\Debug\TestDemo.UserContrl.GridCtrl.resources
+D:\Projects\learngit\TestDemo\GTSAPP\obj\Debug\TestDemo.UserContrl.CurrencyContrl.resources
+D:\Projects\learngit\TestDemo\GTSAPP\obj\Debug\TestDemo.Properties.Resources.resources
+D:\Projects\learngit\TestDemo\GTSAPP\obj\Debug\TestDemo.ReadForm.resources
+D:\Projects\learngit\TestDemo\GTSAPP\obj\Debug\TestDemo.Gridform.resources
+D:\Projects\learngit\TestDemo\GTSAPP\obj\Debug\TestDemo.UserContrl.SquareControl.resources
+D:\Projects\learngit\TestDemo\GTSAPP\obj\Debug\GTSAPP.csproj.GenerateResource.Cache
+D:\Projects\learngit\TestDemo\GTSAPP\obj\Debug\TestDemo.Form4.resources

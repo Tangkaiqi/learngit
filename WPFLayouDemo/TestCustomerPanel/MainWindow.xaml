@@ -1,0 +1,11 @@
+﻿<Window x:Class="TestCustomerPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:custom="clr-namespace:CustomLayoutControl;assembly=CustomLayoutControl"
+        Title="测试自定义布局控件" Height="350" Width="525">
+    <custom:CustomStackPanel Background="Red">
+        <Button Content="Button 1"></Button>
+        <Button Content="Button 2"></Button>
+        <Button Content="Button 3"></Button>
+    </custom:CustomStackPanel>
+</Window>

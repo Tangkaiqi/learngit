@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{247B9B90-EFD6-44FE-B67A-B824C5C67735}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TimedTask</RootNamespace>
+    <AssemblyName>TimedTask</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20901.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="GalaSoft.MvvmLight.Extras.WPF4, Version=4.3.31.28629, Culture=neutral, PublicKeyToken=1673db7d5906b0ad, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\GalaSoft.MvvmLight.Extras.WPF4.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.WPF4, Version=4.3.31.28629, Culture=neutral, PublicKeyToken=63eb5c012e0b3c1c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\GalaSoft.MvvmLight.WPF4.dll</HintPath>
+    </Reference>
+    <Reference Include="Hardcodet.Wpf.TaskbarNotification, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="MSL.Tool, Version=1.0.1.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\MSL.Tool.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="PresentationUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Bll\AutoTask.cs" />
+    <Compile Include="Bll\Note.cs" />
+    <Compile Include="Bll\SysLog.cs" />
+    <Compile Include="Bll\TypeList.cs" />
+    <Compile Include="Control\Loading.xaml.cs">
+      <DependentUpon>Loading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Pager.xaml.cs">
+      <DependentUpon>Pager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UCPager.xaml.cs">
+      <DependentUpon>UCPager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\WebBrowserOverlay.xaml.cs">
+      <DependentUpon>WebBrowserOverlay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converter\DateToFormatConverter.cs" />
+    <Compile Include="Converter\TaskTypeToNameConverter.cs" />
+    <Compile Include="Converter\RunTypeToColorConverter.cs" />
+    <Compile Include="Converter\RunToStateConverter.cs" />
+    <Compile Include="Converter\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converter\EnableToColorConverter.cs" />
+    <Compile Include="Converter\RunTypeToNameConverter.cs" />
+    <Compile Include="Converter\EnableToBtnContentConverter.cs" />
+    <Compile Include="Converter\TypeIdToNameConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utility\DownFile.cs" />
+    <Compile Include="Utility\Helper.cs" />
+    <Compile Include="Utility\HookHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utility\HtmlHelper.cs" />
+    <Resource Include="Theme\Images\Weather\0.gif" />
+    <Resource Include="Theme\Images\Weather\1.gif" />
+    <Resource Include="Theme\Images\Weather\10.gif" />
+    <Resource Include="Theme\Images\Weather\11.gif" />
+    <Resource Include="Theme\Images\Weather\12.gif" />
+    <Resource Include="Theme\Images\Weather\13.gif" />
+    <Resource Include="Theme\Images\Weather\14.gif" />
+    <Resource Include="Theme\Images\Weather\15.gif" />
+    <Resource Include="Theme\Images\Weather\16.gif" />
+    <Resource Include="Theme\Images\Weather\17.gif" />
+    <Resource Include="Theme\Images\Weather\18.gif" />
+    <Resource Include="Theme\Images\Weather\19.gif" />
+    <Resource Include="Theme\Images\Weather\2.gif" />
+    <Resource Include="Theme\Images\Weather\20.gif" />
+    <Resource Include="Theme\Images\Weather\21.gif" />
+    <Resource Include="Theme\Images\Weather\22.gif" />
+    <Resource Include="Theme\Images\Weather\23.gif" />
+    <Resource Include="Theme\Images\Weather\24.gif" />
+    <Resource Include="Theme\Images\Weather\25.gif" />
+    <Resource Include="Theme\Images\Weather\26.gif" />
+    <Resource Include="Theme\Images\Weather\27.gif" />
+    <Resource Include="Theme\Images\Weather\28.gif" />
+    <Resource Include="Theme\Images\Weather\29.gif" />
+    <Resource Include="Theme\Images\Weather\3.gif" />
+    <Resource Include="Theme\Images\Weather\30.gif" />
+    <Resource Include="Theme\Images\Weather\31.gif" />
+    <Resource Include="Theme\Images\Weather\4.gif" />
+    <Resource Include="Theme\Images\Weather\5.gif" />
+    <Resource Include="Theme\Images\Weather\6.gif" />
+    <Resource Include="Theme\Images\Weather\7.gif" />
+    <Resource Include="Theme\Images\Weather\8.gif" />
+    <Resource Include="Theme\Images\Weather\9.gif" />
+    <Resource Include="Theme\Images\loading.gif" />
+    <Resource Include="Theme\Images\Test\1.png" />
+    <Resource Include="Theme\Images\Test\2.png" />
+    <Resource Include="Theme\Images\Test\3.png" />
+    <Resource Include="Theme\Images\Test\4.png" />
+    <Resource Include="Theme\Images\Test\5.png" />
+    <Resource Include="Theme\Images\Test\6.png" />
+    <Content Include="文档\ControlHelper.txt" />
+    <Content Include="文档\ImageHelper.txt" />
+    <Content Include="文档\ShortKey.txt" />
+    <Compile Include="Converter\EnableToStateConverter.cs" />
+    <Compile Include="Utility\LogHelper.cs" />
+    <Compile Include="Model\Zone.cs" />
+    <Compile Include="Model\Audio.cs" />
+    <Compile Include="Model\AutoTask.cs" />
+    <Compile Include="Model\ModelBase.cs" />
+    <Compile Include="Model\Note.cs" />
+    <Compile Include="Model\PM.cs" />
+    <Compile Include="Model\SysLog.cs" />
+    <Compile Include="Model\TypeList.cs" />
+    <Compile Include="Service\WeatherInfo.cs" />
+    <Compile Include="Enums\TaskType.cs" />
+    <Compile Include="Service\Calendar.cs" />
+    <Compile Include="Service\Weather.cs" />
+    <Compile Include="Module\MainModule.xaml.cs">
+      <DependentUpon>MainModule.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Module\NoteListModule.xaml.cs">
+      <DependentUpon>NoteListModule.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Module\TaskListModule.xaml.cs">
+      <DependentUpon>TaskListModule.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WeatherService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Content Include="文档\Translater.txt" />
+    <Compile Include="ViewModel\ConfigViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\NoteViewModel.cs" />
+    <Compile Include="ViewModel\PageImageDownViewModel.cs" />
+    <Compile Include="ViewModel\PageViewModel.cs" />
+    <Compile Include="ViewModel\TaskEditViewModel.cs" />
+    <Compile Include="ViewModel\TaskListViewModel.cs" />
+    <Compile Include="ViewModel\SysLogViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="ViewModel\WindowViewModelBase.cs" />
+    <Compile Include="View\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Content Include="文档\BaseWindow.txt" />
+    <Compile Include="View\Config.xaml.cs">
+      <DependentUpon>Config.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NewsList.xaml.cs">
+      <DependentUpon>NewsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PageImageDown.xaml.cs">
+      <DependentUpon>PageImageDown.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ScreenLock.xaml.cs">
+      <DependentUpon>ScreenLock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TabTest.xaml.cs">
+      <DependentUpon>TabTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TaskEdit.xaml.cs">
+      <DependentUpon>TaskEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\XmlHelper.cs" />
+    <Compile Include="Utility\XamlHelper.cs" />
+    <Compile Include="Service\Task.cs" />
+    <Compile Include="Enums\RunType.cs" />
+    <Compile Include="Utility\SysHelper.cs" />
+    <Compile Include="View\PopUP.xaml.cs">
+      <DependentUpon>PopUP.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TaskRunLog.xaml.cs">
+      <DependentUpon>TaskRunLog.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Control\Loading.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\Pager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Control\UCPager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\WebBrowserOverlay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Module\MainModule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Module\NoteListModule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Module\TaskListModule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Properties\DesignTimeResources1.xaml" Condition="'$(DesignTime)'=='true' OR ('$(SolutionPath)'!='' AND Exists('$(SolutionPath)') AND '$(BuildingInsideVisualStudio)'!='true' AND '$(BuildingInsideExpressionBlend)'!='true')">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
+    <Content Include="文档\BaseWindowStyle.txt">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Page Include="Theme\LabelStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\MenuStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\Style.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\ListBoxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Theme\ButtonStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Theme\TabControlStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\WindowStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\ComboxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Theme\CheckBoxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Theme\TextBoxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Theme\Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Config.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NewsList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PageImageDown.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ScreenLock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TabTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TaskEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PopUP.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TaskRunLog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="Service References\WeatherService\WeatherWebService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="文档\更新记录.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Behavior\" />
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="Theme\Images\Menu\TopMenu\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="文档\DataGrid使用.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Theme\Images\App.ico" />
+    <Resource Include="Theme\Images\bg.jpg" />
+    <Resource Include="Theme\Images\CheckBox\Check.png" />
+    <Resource Include="Theme\Images\CheckBox\Checked.png" />
+    <Resource Include="Theme\Images\CheckBox\Disabled.png" />
+    <Resource Include="Theme\Images\CheckBox\DisabledAndChecked.png" />
+    <Resource Include="Theme\Images\CheckBox\Normal.png" />
+    <Resource Include="Theme\Images\Button\close.bmp" />
+    <Resource Include="Theme\Images\Button\exit.ico" />
+    <Resource Include="Theme\Images\Button\help.ico" />
+    <Resource Include="Theme\Images\icon.png" />
+    <Resource Include="Theme\Images\Button\openFolder.png" />
+    <Resource Include="Theme\Images\RadioButton\Checked.png" />
+    <Resource Include="Theme\Images\RadioButton\Normal.png" />
+    <Resource Include="Theme\Images\RightArrow.png" />
+    <Resource Include="Theme\Images\WinButton\Close.png" />
+    <Resource Include="Theme\Images\WinButton\Close_Hover.png" />
+    <Resource Include="Theme\Images\WinButton\Close_Press.png" />
+    <Resource Include="Theme\Images\WinButton\Maximize.png" />
+    <Resource Include="Theme\Images\WinButton\Maximize_Hover.png" />
+    <Resource Include="Theme\Images\WinButton\Maximize_Press.png" />
+    <Resource Include="Theme\Images\WinButton\Minimize.png" />
+    <Resource Include="Theme\Images\WinButton\Minimize_Hover.png" />
+    <Resource Include="Theme\Images\WinButton\Minimize_Press.png" />
+    <Resource Include="Theme\Images\WinButton\Normal_Hover.png" />
+    <Resource Include="Theme\Images\WinButton\Normal_Press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="文档\TextFile1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WeatherService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WeatherService\WeatherWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WeatherService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WeatherService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WeatherService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Theme\Images\Page\pagination_first.ico" />
+    <Resource Include="Theme\Images\Page\pagination_last.ico" />
+    <Resource Include="Theme\Images\Page\pagination_next.ico" />
+    <Resource Include="Theme\Images\Page\pagination_prev.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Theme\Images\Button\delete.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Theme\Images\Button\add.gif" />
+    <Resource Include="Theme\Images\Button\edit.gif" />
+    <Resource Include="Theme\Images\Button\key.gif" />
+    <Resource Include="Theme\Images\Button\no.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Theme\Images\Button\view.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Theme\Images\Button\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Theme\Images\Button\set.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Theme\Images\Button\note.png" />
+    <Resource Include="Theme\Images\Button\task.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="App.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,12 @@
+﻿<Window x:Class="WPFLayoutDemo.StackPanelDemo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="StackPanel" Height="300" Width="200">
+    <StackPanel Margin="10,10,10,10" Background="Azure">
+        <Label>A Button Stack</Label>
+        <Button Content="Button 1" ></Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+        <Button Content="Button 4"></Button>
+    </StackPanel>
+</Window>

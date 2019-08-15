@@ -1,0 +1,13 @@
+﻿<Window x:Class="ResourceDemo.DynamicResource"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DynamicResource" Height="300" Width="300">
+    <Window.Resources>
+        <SolidColorBrush x:Key="RedBrush" Color="Red"></SolidColorBrush>
+    </Window.Resources>
+    <StackPanel Margin="5">
+        <Button Name="rStaticRe" Background="{StaticResource RedBrush}" Margin="5" FontSize="14" Content="Use a Static Resource"/>
+        <Button Background="{DynamicResource RedBrush}" Margin="5" FontSize="14" Content="Use a Dynamic Resource"/>
+        <Button Margin="5" FontSize="14" Content="Change the RedBrush to Yellow" Click="ChangeBrushToYellow_Click"/>
+    </StackPanel>
+</Window>

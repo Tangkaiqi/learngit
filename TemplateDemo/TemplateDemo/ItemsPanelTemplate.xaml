@@ -1,0 +1,30 @@
+﻿<Window x:Class="TemplateDemo.ItemsPanelTemplate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ItemsPanelTemplate" Height="300" Width="300">
+    <Window.Resources>
+        <!--定义DataTemplate-->
+        <DataTemplate x:Key="personDataTem">
+            <Border Name="blueBorder" Margin="3" BorderThickness="3" BorderBrush="Blue"
+              CornerRadius="5">
+                <Grid Margin="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Name="nametxt" FontWeight="Bold" Text="{Binding Path=Name}"></TextBlock>
+                    <TextBlock Grid.Row="1" Text="{Binding Path=Age}"></TextBlock>
+                </Grid>
+            </Border>
+        </DataTemplate>
+        <!--定义ItemsPanelTemplate-->
+        <ItemsPanelTemplate x:Key="listItemsPanelTem">
+            <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"/>
+        </ItemsPanelTemplate>
+    </Window.Resources>
+    
+    <!--使用ItemsPanelTemplate只需要赋值给ItemsPanel属性即可-->
+    <ListBox Name="lstPerson" ItemsPanel="{StaticResource listItemsPanelTem}" ItemTemplate="{StaticResource personDataTem}" />
+</Window>

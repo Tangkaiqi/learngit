@@ -1,0 +1,26 @@
+﻿<Window x:Class="WPFCommand.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="200" Width="300">
+    <!--定义窗口命令绑定，绑定的命令是New命令，处理程序是NewCommand-->
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.New" Executed="NewCommand"/>
+    </Window.CommandBindings>
+    
+    <StackPanel>
+        <Menu>
+            <MenuItem Header="File">
+                <!--WPF内置命令都可以采用其缩写形式-->
+                <MenuItem Command="New"></MenuItem>
+            </MenuItem>
+        </Menu>
+        
+        <!--获得命令文本的两种方式-->
+        <!--直接从静态的命令对象中提取文本-->
+        <Button Margin="5" Padding="5" Command="ApplicationCommands.New" ToolTip="{x:Static ApplicationCommands.New}">New</Button>
+
+        <!--使用数据绑定，获得正在使用的Command对象，并提取其Text属性-->
+        <Button Margin="5" Padding="5" Command="ApplicationCommands.New" Content="{Binding RelativeSource={RelativeSource Self},Path=Command.Text}"/>
+        <Button Margin="5" Padding="5" Visibility="Visible" Click="cmdDoCommand_Click" >DoCommand</Button>
+    </StackPanel>
+</Window>

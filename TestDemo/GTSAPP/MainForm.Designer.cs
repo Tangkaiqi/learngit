@@ -34,6 +34,7 @@
             this.tabExperimentHistory = new System.Windows.Forms.TabPage();
             this.tabSetUp = new System.Windows.Forms.TabPage();
             this.tabHelp = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabExperimentTask.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +58,7 @@
             // tabExperimentTask
             // 
             this.tabExperimentTask.BackColor = System.Drawing.Color.Transparent;
+            this.tabExperimentTask.Controls.Add(this.button1);
             this.tabExperimentTask.Controls.Add(this.btnNewTask);
             this.tabExperimentTask.Font = new System.Drawing.Font("宋体", 10F);
             this.tabExperimentTask.Location = new System.Drawing.Point(4, 28);
@@ -116,6 +118,16 @@
             this.tabHelp.Tag = "3";
             this.tabHelp.Text = "系统帮助";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(57, 227);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "下拉菜单";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -142,5 +154,6 @@
         private System.Windows.Forms.TabPage tabSetUp;
         private System.Windows.Forms.TabPage tabHelp;
         private System.Windows.Forms.Button btnNewTask;
+        private System.Windows.Forms.Button button1;
     }
 }

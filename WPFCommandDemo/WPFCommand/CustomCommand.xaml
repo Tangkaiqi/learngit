@@ -1,0 +1,17 @@
+﻿<!--要使用自定义命令，首先需要将.NET命名空间映射为XAML名称空间,这里映射的命名空间为local-->
+    <Window x:Class="WPFCommand.CustomCommand"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+       
+        xmlns:local="clr-namespace:WPFCommand" 
+        Title="CustomCommand" Height="300" Width="300" >
+       
+    <Window.CommandBindings>
+        <!--定义命令绑定-->
+        <CommandBinding Command="local:CustomCommands.Requery" Executed="RequeryCommand_Execute"/>
+    </Window.CommandBindings>
+    <StackPanel>
+        <!--应用命令-->
+        <Button Margin="5" Command="local:CustomCommands.Requery" Content="{Binding RelativeSource={RelativeSource Self}, Path=Command.Text}"></Button>
+    </StackPanel>
+</Window>

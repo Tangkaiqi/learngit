@@ -1,0 +1,32 @@
+﻿<Window x:Class="TemplateDemo.DataTemplate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local ="clr-namespace:TemplateDemo;assembly=TemplateDemo"
+        Title="DataTemplate" Height="300" Width="300">
+    <Window.Resources>
+        <!--创建数据模板-->
+        <DataTemplate x:Key="personDataTem">
+            <Border Name="blueBorder" Margin="3" BorderThickness="3" BorderBrush="Blue"
+              CornerRadius="5">
+                <Grid Margin="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Name="nametxt" FontWeight="Bold" Text="{Binding Path=Name}"></TextBlock>
+                    <TextBlock Grid.Row="1" Text="{Binding Path=Age}"></TextBlock>
+                </Grid>
+            </Border>
+            <!--定义数据模板触发器-->
+            <DataTemplate.Triggers>
+                <Trigger SourceName="blueBorder" Property="IsMouseOver" Value="True">
+                    <Setter TargetName="blueBorder" Property="Background" Value="LightGray"/>
+                    <Setter TargetName="nametxt" Property="FontSize" Value="20"/>
+                </Trigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+    </Window.Resources>
+    <StackPanel Margin="5">
+        <ListBox Name="lstPerson" HorizontalContentAlignment="Stretch" ItemTemplate="{StaticResource personDataTem}"></ListBox>
+    </StackPanel>
+</Window>
